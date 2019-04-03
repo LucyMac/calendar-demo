@@ -1,0 +1,79 @@
+.calendar {
+  color: #444;
+  background-color: #5b88f366;
+  padding: 0 10px;
+  height: calc(100vh - 100px);
+}
+
+.calendar__header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+}
+
+.calendar__header-item {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.calendar__body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  padding-bottom: 70px;
+}
+
+/* DAY */
+
+.day {
+  background-color: #fff;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.day__date {
+  margin: 5px 5px 0 0;
+  align-self: flex-end;
+}
+
+.day__reminders {
+  max-height: calc(100% - 20px);
+  overflow: hidden;
+}
+
+/* REMINDER */
+
+.reminder {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  padding-bottom: 10px;
+}
+
+.reminder__start,
+.reminder__title {
+  margin: 0;
+  font-size: 12px;
+}
+
+.reminder__title {
+  /* width: 100px;
+  white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.reminder__start {
+  font-weight: bold;
+}
+
+.reminder__colour {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 5px;
+}

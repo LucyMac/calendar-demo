@@ -8,7 +8,7 @@ const Reminder = ({ reminder, date, deleteReminder }) => {
         <p className="reminder__start">{reminder.startTime}</p>
         <p className="reminder__title">{reminder.title}</p>
       </div>
-      <div className="reminder__remove" onClick={() => deleteReminder(reminder.id)}>x</div>
+      <div className="reminder__remove" onClick={() => deleteReminder(reminder.id, date)}>x</div>
     </div>
   );
 }

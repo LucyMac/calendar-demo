@@ -35,9 +35,9 @@ class Calendar extends Component {
     });
   }
 
-  deleteReminder = (id) => {
-    console.log('deleteReminder id:', id);
-    this.props.dispatch(deleteReminder(id, this.state.currentDay.date));
+  deleteReminder = (id, date) => {
+    console.log('deleteReminder id:', id, date);
+    this.props.dispatch(deleteReminder(id, date));
   }
 
   render() {

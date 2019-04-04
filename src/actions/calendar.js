@@ -23,14 +23,15 @@ export const addReminder = (reminder, date) => {
   }
 };
 
-export const deleteReminder = (id) => {
+export const deleteReminder = (id, date) => {
 
   console.log('deleteReminder ACTION:', id);
 
   return {
     type: CALENDAR.DELETE_REMINDER,
     payload: {
-      id
+      id,
+      date
     },
   }
 };

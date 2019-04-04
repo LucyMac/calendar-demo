@@ -1,3 +1,3 @@
 Calendar built in React and Redux. Enables adding and deleting colour coded reminders.
 
-_Deleting WIP_
+_Sorting by start time WIP_

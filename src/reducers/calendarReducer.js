@@ -38,14 +38,14 @@ const calendarReducer = (
      */
     case ADD_REMINDER: {
 
-    console.log('addReminder REDUCER', action.payload.reminder);
       const newReminder = action.payload.reminder;
+      const reminderId =  Math.floor(Math.random() * 20);
+      newReminder.id = reminderId;
       const date = action.payload.date;
 
       let updatedMonth = [...currentMonth];
 
       let dayChanging = updatedMonth.find(day => day.date === date );
-
       dayChanging.reminders.push(newReminder);
 
       const IndexDayChanging = updatedMonth.findIndex(savedDay => savedDay.date === date)
@@ -77,15 +77,27 @@ const calendarReducer = (
      */
     case DELETE_REMINDER: {
 
-    console.log('addReminder REDUCER:');
+    console.log('addReminder REDUCER:', action.payload.id);
+
+    const idToRemove = action.payload.id;
+    const date = action.payload.date;
+
+    let updatedMonth = [...currentMonth];
+
+    let dayChanging = updatedMonth.find(day => day.date === date );
+    const indexToRemove = dayChanging.reminders.findIndex(reminder => reminder.id === idToRemove);
+    dayChanging.reminders.splice(indexToRemove, 1);
+
+    const IndexDayChanging = updatedMonth.findIndex(savedDay => savedDay.date === date)
+    updatedMonth[IndexDayChanging] = dayChanging;
 
       return Object.assign({}, state, {
         networkState: 'deleting',
+        currentMonth: updatedMonth
       })
     }
 
     case DELETE_REMINDER_SUCCESS: {
-      // const data = action.payload.data;
   
       return Object.assign({}, state, {
         networkState: 'deleted',

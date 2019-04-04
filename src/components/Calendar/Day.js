@@ -14,6 +14,7 @@ const Day = ({ day, toggleReminderFormView, deleteReminder }) => {
           <Reminder 
             key={i} 
             reminder={reminder}
+            date={day.date}
             deleteReminder={deleteReminder}
           />
         )

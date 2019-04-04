@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Reminder = ({ reminder, deleteReminder }) => {
+const Reminder = ({ reminder, date, deleteReminder }) => {
   return (
     <div className="reminder">
       <div className="reminder__colour" style={{ backgroundColor: reminder.color}}></div>

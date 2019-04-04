@@ -5,7 +5,7 @@ import Day from './Day';
 import ReminderForm from './ReminderForm';
 
 // Actions
-import { addReminder } from '../../actions/calendar';
+import { addReminder, deleteReminder } from '../../actions/calendar';
 
 import './Calendar.scss';
 
@@ -29,7 +29,6 @@ class Calendar extends Component {
   }
 
   addReminder = (values) => {
-    console.log('addReminder values:', values, 'this.state.currentDay', this.state.currentDay);
     this.props.dispatch(addReminder(values, this.state.currentDay.date));
     this.setState({ 
       formIsVisible: false
@@ -38,6 +37,7 @@ class Calendar extends Component {
 
   deleteReminder = (id) => {
     console.log('deleteReminder id:', id);
+    this.props.dispatch(deleteReminder(id, this.state.currentDay.date));
   }
 
   render() {

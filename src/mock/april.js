@@ -6,39 +6,17 @@ export const april = [
       {
         "id": 123,
         "title": "meet Leo",
-        // "startTime": "2019-04-01T13:30:00",
-        // "endTime": "2019-04-01T15:00:00",
         "startTime": "13:30",
         "endTime": "15:00",
         "color": "#ff7f7f"
       },
-      {
-        "id": 123,
-        "title": "Lorem Ipsum is simply dummy text of the printing",
-        // "startTime": "2019-04-01T18:00:00",
-        // "endTime": "2019-04-01T19:00:00",
-        "startTime": "18:00",
-        "endTime": "19:00",
-        "color": "#cdff7f"
-      },
-      {
-        "id": 123,
-        "title": "Call Sabina",
-        // "startTime": "2019-04-01T18:00:00",
-        // "endTime": "2019-04-01T19:00:00",
-        "startTime": "18:00",
-        "endTime": "19:00",
-        "color": "#cdff7f"
-      },
-      {
-        "id": 123,
-        "title": "Call Sabina",
-        // "startTime": "2019-04-01T18:00:00",
-        // "endTime": "2019-04-01T19:00:00",
-        "startTime": "18:00",
-        "endTime": "19:00",
-        "color": "#cdff7f"
-      },
+      // {
+      //   "id": 125,
+      //   "title": "Call Sabina",
+      //   "startTime": "18:00",
+      //   "endTime": "19:00",
+      //   "color": "#cdff7f"
+      // },
     ]
   },
   {

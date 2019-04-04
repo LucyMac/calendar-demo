@@ -30,6 +30,7 @@
 }
 
 /* DAY */
+
 .day {
   background-color: #fff;
   height: 100px;
@@ -37,64 +38,66 @@
   flex-direction: column;
   border-radius: 2px;
   padding: 5px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__date {
+    margin: 0;
+  }
+  
+  &__reminders {
+    max-height: calc(100% - 20px);
+    overflow: hidden;
+  }
+  
+  &__add {
+    cursor: pointer;
+    color: #ddd;
+    
+    &:hover {
+      color: #444;
+    }
+  }
 }
 
-.day__header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.day__date {
-  margin: 0;
-}
-
-.day__reminders {
-  max-height: calc(100% - 20px);
-  overflow: hidden;
-}
-
-.day__add {
-  cursor: pointer;
-  color: #ddd;
-}
-
-.day__add:hover {
-  color: #444;
-}
 
 /* REMINDER */
+
 .reminder {
   display: grid;
   grid-template-columns: 25px 1fr 20px;
   padding-bottom: 10px;
-}
-
-.reminder__start, .reminder__title {
-  margin: 0;
-  font-size: 12px;
-}
-
-.reminder__title {
-  /* width: 100px;
+  
+  &__start,
+  &__title {
+    margin: 0;
+    font-size: 12px;
+  }
+  
+  &__title {
+    /* width: 100px;
     white-space: nowrap; */
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__start {
+    font-weight: bold;
+  }
+  
+  &__colour {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 5px;
+  }
 
-.reminder__start {
-  font-weight: bold;
-}
-
-.reminder__colour {
-  width: 15px;
-  height: 15px;
-  display: inline-block;
-  border-radius: 5px;
-}
-
-.reminder__remove {
-  justify-self: flex-end;
-  color: grey;
-  pointer-events: all;
-  cursor: pointer;
+  &__remove {
+    justify-self: flex-end;
+    color: grey;
+    pointer-events: all;
+    cursor: pointer;
+  }
 }
